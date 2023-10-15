@@ -1,0 +1,173 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-size: 16px;
+}
+
+.header {
+  height: 100px;
+  /* background-color: transparent;   */
+  color: red;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  top: 0%;
+}
+
+.header-title {
+  font-size: 30px;
+  font-weight: bold;
+}
+
+.banner {
+  height: 100vh;
+  background-image: url("https://seatgeek.com/_next/image?url=https%3A%2F%2Fseatgeek.com%2Fimages%2Fimage_uploads%2Fhomepage%2Fhomepage-xxlarge%402x.jpg&w=1920&q=75");
+  background-position: inherit;
+  background-size:cover;
+  background-color: #000;
+  /* background-position-y: calc(100% - 70px); */
+}
+
+.search-bar {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 600px;
+  height: 50px;
+  color: #fff;
+  text-align: center;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  z-index: 1;
+}
+
+.header-content{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  z-index: 1;
+  width: 100%;
+  margin-bottom: 0;
+}
+
+.search-bar-title {
+        font-size: 3rem;
+        font-weight: bold;
+        color: white;
+        margin: 1.5rem 0;
+        line-height: 3.5rem;
+        letter-spacing: -0.02rem;
+
+}
+
+.search-bar-sub-title {
+  font-size: 1.25rem;
+  font-weight: 400;
+  color: white;
+  margin: 0 0 2.5rem;
+  line-height: 2.5rem;
+  letter-spacing: -0.02rem;
+}
+
+.search-bar-input {
+  width: 100%;
+  height: 100%;
+  border: none;
+  outline: none;
+  font-size: 16px;
+}
+
+@media (max-width: 768px) {
+  .banner {
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 80vh;
+  }
+
+    .search-bar {
+      transform: translate(-50%, -50%);
+      width: 400px;
+      height: 50px;
+      top: 30%;
+
+    }
+        .search-bar-input {
+          width: 100%;
+          height: 100%;
+          top: 50%;
+          /* max-width: 30rem; */
+          border: none;
+          outline: none;
+          background-color: white;
+          /* padding: 40px; */
+          font-size: 16px;
+        }
+
+     .search-bar-title{
+      font-size: 1.625rem;
+      font-weight: 700;
+      color: white;
+      margin-bottom: 1rem;
+      line-height: 2.25rem;
+      letter-spacing: 0.005rem;
+     }
+
+     .search-bar-sub-title{
+      font-size: 1.25rem;
+      line-height: 2rem;
+      letter-spacing: 0.005rem;
+      margin: 0 0 2.5rem;
+      margin-bottom: 0;
+      font-weight: 400;
+     }
+        
+}
+
+
+/* for mobile device */
+
+@media (max-width: 480px) {
+  .banner {
+    background-color: #000;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    height: 60vh;
+  }
+
+  .search-bar{
+      width: 250px;
+      top:30%
+  }
+
+    .search-bar-input {
+      width: 100%;
+    }
+
+    .search-bar-title {
+
+          font-size: 1.65rem;
+          font-weight: 700;
+          color: white;
+          margin: 2rem 0;
+          line-height: 2.25rem;
+          letter-spacing: -0.005rem;
+          margin-bottom: 1rem;
+        }
+        .search-sub-title{
+          font-size: 1.25rem;
+          line-height: 2rem;
+          letter-spacing: 0.005rem;
+          margin: 0 0 2.5rem;
+        }
+}
+
+
+/* media query for less than 350 */
