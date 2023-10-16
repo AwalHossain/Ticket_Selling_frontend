@@ -1,13 +1,17 @@
-import { Col, Row } from "antd";
+''
+import { useState } from "react";
+import Navbar from "./Navbar/Navbar";
+import SearchBar from "./SearchBar";
 
 const Header = () => {
-    return (
-        <Row className="header">
-            <Col span={24}>
-                <h1 className="header-title">SEAT GEEK</h1>
-            </Col>
-        </Row>
-    );
-};
+    const [open, setOpen] = useState(false);
 
-export default Header;
+    return (
+        <div className='banner'>
+            <Navbar />
+            <SearchBar />
+        </div>
+    )
+}
+
+export default Header
