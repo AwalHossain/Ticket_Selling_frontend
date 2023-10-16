@@ -1,3 +1,7 @@
+@import 'tailwindcss/base';
+@import 'tailwindcss/components';
+@import 'tailwindcss/utilities';
+
 body {
   margin: 0;
   padding: 0;
@@ -43,7 +47,7 @@ body {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  z-index: 1;
+  /* z-index: 1; */
 }
 
 .header-content{
@@ -51,7 +55,7 @@ body {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  z-index: 1;
+  /* z-index: 1; */
   width: 100%;
   margin-bottom: 0;
 }
@@ -168,6 +172,3 @@ body {
           margin: 0 0 2.5rem;
         }
 }
-
-
-/* media query for less than 350 */
