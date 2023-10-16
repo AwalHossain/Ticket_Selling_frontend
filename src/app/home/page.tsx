@@ -1,12 +1,14 @@
 'use client'
-import Nav from "@/components/Home/Nav"
+import Header from "@/components/Header"
+import Home from "@/components/Home/HomePage"
 import Trending from "@/components/Trending"
 
 const HomePage = () => {
     return (
         <div>
-            <Nav />
+            <Header />
             <Trending />
+            <Home />
         </div>
     )
 }
