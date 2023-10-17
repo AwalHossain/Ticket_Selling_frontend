@@ -27,7 +27,7 @@ const Navbar = () => {
                             <Image height={30} width={90} className="bg-red-800 " src={logo} alt="" />
                             <div className="md:hidden text-3xl text-white" onClick={() => setOpen(!open)}>
                                 {
-                                    open ? <CloseOutlined className="text-black" /> : < MenuOutlined />
+                                    open ? <CloseOutlined className="!text-black" /> : < MenuOutlined />
                                 }
                             </div>
                         </div>
@@ -47,11 +47,11 @@ const Navbar = () => {
                         <ul
                             className={`md:hidden bg-white absolute 
                     text-black
-                    w-full h-full bottom-0 py-24 pl-4
-                        duration-500 ${open ? "left-0" : "left-[-100%]"}
-                        z-10
-                    !important
+                    w-full  bottom-0 py-24 pl-4
+                        duration-500 ${open ? "left-0 h-screen" : "left-[-100%]"}
+                        z-40 overflow-y-scroll scrollbar-hide 
                     `}
+                        // style={{ maxHeight: "calc(100vh - 80px)" }}
                         >
                             <li >
                                 <Link href="/" className="py-7 px-3 inline-block">
