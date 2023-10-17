@@ -1,17 +1,17 @@
+/* eslint-disable react/no-unescaped-entities */
 'use client'
 
 
-import { Modal } from 'antd';
 import React, { useState } from 'react';
+import LoginModal from '../modal/LoginModal';
+import SignupModal from '../modal/SignupModal';
+
+
 
 const Profile: React.FC = () => {
     const [open, setOpen] = useState(false);
     const [confirmLoading, setConfirmLoading] = useState(false);
     const [modalText, setModalText] = useState('Content of the modal');
-
-    const showModal = () => {
-        setOpen(true);
-    };
 
     const handleOk = () => {
         setModalText('The modal will be closed after two seconds');
@@ -27,24 +27,50 @@ const Profile: React.FC = () => {
         setOpen(false);
     };
 
+    const [loginModalVisible, setLoginModalVisible] = useState(false);
+    const [signupModalVisible, setSignupModalVisible] = useState(false);
+
+    const showLoginModal = () => {
+        setLoginModalVisible(true);
+        setSignupModalVisible(false);
+    };
+
+    const showSignupModal = () => {
+        setSignupModalVisible(true);
+        setLoginModalVisible(false);
+    };
+
+    const closeModals = () => {
+        setLoginModalVisible(false);
+        setSignupModalVisible(false);
+    };
+
+
+
     return (
         <>
 
-            <button onClick={showModal} className="bg-blue-950 text-black px-6 py-2
-             rounded-full
-             ">
+            <button onClick={showLoginModal} className="bg-blue-950 text-black px-6 py-2 rounded-full">
                 Get Started
             </button>
 
-            <Modal
-                title="Title"
-                open={open}
-                onOk={handleOk}
+            <LoginModal
+                title="Login"
+                visible={loginModalVisible}
                 confirmLoading={confirmLoading}
-                onCancel={handleCancel}
-            >
-                <p>{modalText}</p>
-            </Modal>
+                onOk={handleOk}
+                onCancel={closeModals}
+                showSignup={showSignupModal}
+            />
+
+            <SignupModal
+                title="Sign Up"
+                visible={signupModalVisible}
+                confirmLoading={confirmLoading}
+                onOk={handleOk}
+                onCancel={closeModals}
+                showLogin={showLoginModal}
+            />
         </>
     );
 };
