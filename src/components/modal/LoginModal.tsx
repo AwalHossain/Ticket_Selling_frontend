@@ -1,5 +1,8 @@
+'use client';
+import { useUserLoginMutation } from '@/redux/api/user/authApi';
 import { Button, Col, Modal, Row } from 'antd';
 import { useState } from 'react';
+import { SubmitHandler } from 'react-hook-form';
 import Form from '../Forms/Form';
 import FormInput from '../Forms/FormInput';
 
@@ -12,6 +15,11 @@ interface SignupModalProps {
     showSignup?: () => void;
 }
 
+type FormValues = {
+    email: string;
+    password: string;
+};
+
 const LoginModal = ({
     title,
     visible,
@@ -22,8 +30,19 @@ const LoginModal = ({
 }: SignupModalProps) => {
     const [isLoginModalVisible, setIsLoginModalVisible] = useState(true);
 
-    const onSubmit = (data: any) => {
+    const [userLogin] = useUserLoginMutation();
+
+    const onSubmit: SubmitHandler<FormValues> = async (data: any) => {
         console.log(data);
+        try {
+            const res = await userLogin({
+                email: data.email,
+                password: data.password
+            });
+            console.log(res);
+        } catch (error) {
+            console.log(error);
+        }
     };
 
     const toggleLoginModal = () => {
