@@ -1,4 +1,4 @@
-import { getErrorMessagesByPropertyName } from "@/lib/schema-validator";
+import { getErrorMessagesByPropertyName } from "@/utils/schema-validator";
 import { Input } from "antd";
 import { Controller, useFormContext } from "react-hook-form";
 
