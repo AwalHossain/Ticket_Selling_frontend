@@ -11,8 +11,6 @@ import { IGenericErrorResponse } from '../Types/common';
 interface SignupModalProps {
     title: string;
     visible: boolean;
-    confirmLoading: boolean;
-    onOk: () => void;
     onCancel: () => void;
     showSignup?: () => void;
 }
@@ -26,8 +24,6 @@ type FormValues = {
 const LoginModal = ({
     title,
     visible,
-    confirmLoading,
-    onOk,
     onCancel,
     showSignup
 }: SignupModalProps) => {
@@ -94,10 +90,7 @@ const LoginModal = ({
                 className={loading ? '!blur-sm' : ""}
                 title={title}
                 open={visible}
-                onOk={onOk}
-                // confirmLoading={confirmLoading}
                 onCancel={onCancel}
-            // closeIcon={<><p>Close</p></>}
             >
                 <div>
                     <h1 className="text-2xl text-center">{title}</h1>
