@@ -1,4 +1,4 @@
-''
+'use client'
 import { useState } from "react";
 import Navbar from "./Navbar/Navbar";
 import SearchBar from "./SearchBar";
