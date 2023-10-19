@@ -37,7 +37,7 @@ const HomePage = () => {
         {
             title: "Card 7",
             content: "Content for Card 3",
-            img: "https://links.papareact.com/4cjse",
+            img: "https://links.papareact.com/4cj",
         },
 
         // Add more cards as needed
@@ -117,13 +117,13 @@ const HomePage = () => {
                                     className={prevButtonClasses}
                                 >
                                     <svg xmlns="http://www.w3.org/2000/svg" className={`h-6 w-6 ${isPrevDisabled ? "opacity-50" : ""}`} fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 19l-7-7 7-7" />
+                                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M16 19l-7-7 7-7" />
                                     </svg>
                                 </button>
                                 <span>{cardRange}</span>
                                 <button className={nextButtonClasses} onClick={nextCard} disabled={isNextDisabled}>
                                     <svg xmlns="http://www.w3.org/2000/svg" className={`h-6 w-6 ${isNextDisabled ? "opacity-50" : ""}`} fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+                                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 5l7 7-7 7" />
                                     </svg>
                                 </button>
                             </div>
