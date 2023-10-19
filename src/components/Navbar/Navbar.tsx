@@ -6,7 +6,7 @@ import { Suspense, useState } from "react";
 import logo from "../../../public/next.svg";
 import NavLinks from "./LeftMenu";
 import MobileView from "./MobileView";
-import Profile from "./RightMenut";
+import RightMenu from "./RightMenu";
 
 const Navbar = () => {
 
@@ -42,7 +42,7 @@ const Navbar = () => {
                             <NavLinks />
                         </ul>
                         <div className="md:block hidden !important">
-                            <Profile />
+                            <RightMenu />
                         </div>
                         {/* Mobile View */}
                         <MobileView open={open} />

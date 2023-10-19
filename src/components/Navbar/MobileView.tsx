@@ -1,7 +1,7 @@
 'use client'
 import Link from 'next/link'
 import NavLinks from './LeftMenu'
-import Profile from './RightMenut'
+import RightMenu from './RightMenu'
 
 const MobileView = ({ open }: { open: boolean }) => {
     return (
@@ -22,7 +22,7 @@ const MobileView = ({ open }: { open: boolean }) => {
                 </li>
                 <NavLinks />
                 <div className="py-5">
-                    <Profile />
+                    <RightMenu />
                 </div>
             </ul>
         </>
