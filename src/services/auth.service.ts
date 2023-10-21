@@ -8,6 +8,14 @@ import { getFromLocalStorage } from "@/utils/local-storage";
 import { useEffect, useState } from "react";
 
 
+export interface UserInfo {
+
+    email: string;
+    role: string;
+    iat: number;
+    exp: number;
+}
+
 
 
 export const getUserInfo = () => {
@@ -29,13 +37,16 @@ export const useAuth = () => {
 
     useEffect(() => {
         // Simulate an asynchronous check of user authentication status
-        setTimeout(() => {
-            setIsUserLoggedIn(!!authToken);
-            setIsLoading(false);
-        }, 2000); // Adjust the timeout as needed
-    }, [authToken]);
+        setIsLoading(true);
+        // setTimeout(() => {
+        setIsUserLoggedIn(!!authToken);
+        setIsLoading(false);
+        // }, 2000); // Adjust the timeout as needed
+    }, [authToken, isUserLoggedIn, isLoading]);
     return { isUserLoggedIn, isLoading };
 }
+
+
 
 
 export const getNewAccessToken = async () => {
