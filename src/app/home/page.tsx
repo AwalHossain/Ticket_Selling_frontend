@@ -1,5 +1,5 @@
 'use client'
-import Header from "@/components/Header"
+import Header from "@/components/headers/Header"
 import Home from "@/components/Home/HomePage"
 import Trending from "@/components/Trending"
 
